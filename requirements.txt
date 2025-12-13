@@ -1,0 +1,22 @@
+# Python dependencies for content processing pipeline
+
+# LlamaIndex for document processing and embeddings
+llama-index>=0.10.0
+llama-index-embeddings-openai>=0.1.0
+
+# OpenAI for Whisper transcription and embeddings
+openai>=1.0.0
+
+# Pinecone for vector storage
+pinecone-client>=3.0.0
+
+# Data processing
+pandas>=2.0.0
+openpyxl>=3.1.0
+
+# YouTube metadata extraction
+yt-dlp>=2024.1.0
+
+# Utilities
+python-dotenv>=1.0.0
+tqdm>=4.66.0
