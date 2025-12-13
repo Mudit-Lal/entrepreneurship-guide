@@ -59,7 +59,7 @@ export function OnboardingModal({ onComplete, onSkip }: OnboardingModalProps) {
               Welcome to ASU Mentor Bot
             </h2>
             <p className="text-gray-600 mt-2">
-              I'm here to help you build something real.
+              I&apos;m here to help you build something real.
             </p>
           </div>
 
@@ -78,7 +78,7 @@ export function OnboardingModal({ onComplete, onSkip }: OnboardingModalProps) {
                     Just exploring ideas
                   </div>
                   <div className="text-sm text-gray-500">
-                    I don't have a specific venture yet
+                    I don&apos;t have a specific venture yet
                   </div>
                 </button>
 
@@ -90,7 +90,7 @@ export function OnboardingModal({ onComplete, onSkip }: OnboardingModalProps) {
                     Validating an idea
                   </div>
                   <div className="text-sm text-gray-500">
-                    I have an idea and I'm testing assumptions
+                    I have an idea and I&apos;m testing assumptions
                   </div>
                 </button>
 
@@ -139,7 +139,7 @@ export function OnboardingModal({ onComplete, onSkip }: OnboardingModalProps) {
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    What's your major or program?
+                    What&apos;s your major or program?
                   </label>
                   <input
                     type="text"
@@ -229,7 +229,7 @@ export function OnboardingModal({ onComplete, onSkip }: OnboardingModalProps) {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    What's your timeline?
+                    What&apos;s your timeline?
                   </label>
                   <select
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-maroon-500 focus:border-transparent"

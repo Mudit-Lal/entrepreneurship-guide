@@ -169,7 +169,7 @@ export function ChatInterface({ userContext, onUpdateContext }: ChatInterfacePro
                 What are you working on?
               </h2>
               <p className="text-gray-600 max-w-md mx-auto">
-                Tell me about your venture idea, challenge, or question. I'll
+                Tell me about your venture idea, challenge, or question. I&apos;ll
                 help you think through it with honest feedback and relevant ASU
                 resources.
               </p>
