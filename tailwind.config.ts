@@ -8,9 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-family)", "system-ui", "sans-serif"],
+      },
       colors: {
         maroon: {
-          DEFAULT: "#8C1D40",
+          DEFAULT: "var(--color-maroon)",
           50: "#F9E8ED",
           100: "#F3D1DB",
           200: "#E7A3B7",
@@ -23,7 +26,7 @@ const config: Config = {
           900: "#1C060D",
         },
         gold: {
-          DEFAULT: "#FFC627",
+          DEFAULT: "var(--color-gold)",
           50: "#FFF8E5",
           100: "#FFF1CC",
           200: "#FFE399",
@@ -35,6 +38,18 @@ const config: Config = {
           800: "#B38A1B",
           900: "#997617",
         },
+      },
+      borderRadius: {
+        sm: "var(--radius-sm)",
+        md: "var(--radius-md)",
+        lg: "var(--radius-lg)",
+        xl: "var(--radius-xl)",
+        "2xl": "var(--radius-2xl)",
+      },
+      boxShadow: {
+        sm: "var(--shadow-sm)",
+        md: "var(--shadow-md)",
+        lg: "var(--shadow-lg)",
       },
     },
   },

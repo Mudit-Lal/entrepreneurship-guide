@@ -4,6 +4,30 @@ import { useState, useRef, useEffect } from "react";
 import { Message } from "./Message";
 import { Message as MessageType, UserContext, ChatResponse } from "@/types";
 
+// Witty loading messages for entertainment while waiting
+const loadingMessages = [
+  "Crunching the numbers...",
+  "Consulting the startup gods...",
+  "Channeling my inner investor...",
+  "Validating assumptions...",
+  "Calculating your runway...",
+  "Brewing startup wisdom...",
+  "Checking the competitive landscape...",
+  "Drafting your pitch deck mentally...",
+  "Thinking like a VC...",
+  "Running the lean canvas in my head...",
+  "Pivoting my thoughts...",
+  "Finding product-market fit...",
+  "Bootstrapping an answer...",
+  "Disrupting my thought process...",
+  "Synergizing ideas...",
+  "Iterating on my response...",
+  "Doing customer discovery...",
+  "Analyzing market dynamics...",
+  "Stress-testing this idea...",
+  "Checking with the ASU network...",
+];
+
 interface ChatInterfaceProps {
   userContext: UserContext | null;
   onUpdateContext: () => void;
@@ -13,6 +37,7 @@ export function ChatInterface({ userContext, onUpdateContext }: ChatInterfacePro
   const [messages, setMessages] = useState<MessageType[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [loadingMessageIndex, setLoadingMessageIndex] = useState(0);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -20,6 +45,20 @@ export function ChatInterface({ userContext, onUpdateContext }: ChatInterfacePro
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
+
+  // Rotate loading messages every 2.5 seconds
+  useEffect(() => {
+    if (!isLoading) {
+      setLoadingMessageIndex(0);
+      return;
+    }
+
+    const interval = setInterval(() => {
+      setLoadingMessageIndex((prev) => (prev + 1) % loadingMessages.length);
+    }, 2500);
+
+    return () => clearInterval(interval);
+  }, [isLoading]);
 
   // Auto-resize textarea
   useEffect(() => {
@@ -199,19 +238,21 @@ export function ChatInterface({ userContext, onUpdateContext }: ChatInterfacePro
           {isLoading && (
             <div className="flex justify-start">
               <div className="bg-white rounded-2xl rounded-bl-md px-4 py-3 shadow-sm border border-gray-100">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-3">
                   <div className="flex gap-1">
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" />
+                    <div className="w-2 h-2 bg-maroon-400 rounded-full animate-bounce" />
                     <div
-                      className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                      className="w-2 h-2 bg-maroon-400 rounded-full animate-bounce"
                       style={{ animationDelay: "0.1s" }}
                     />
                     <div
-                      className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                      className="w-2 h-2 bg-maroon-400 rounded-full animate-bounce"
                       style={{ animationDelay: "0.2s" }}
                     />
                   </div>
-                  <span className="text-sm text-gray-500">Thinking...</span>
+                  <span className="text-sm text-gray-600 min-w-[200px] transition-opacity duration-300">
+                    {loadingMessages[loadingMessageIndex]}
+                  </span>
                 </div>
               </div>
             </div>
