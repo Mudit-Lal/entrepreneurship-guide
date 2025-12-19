@@ -56,10 +56,13 @@ export function OnboardingModal({ onComplete, onSkip }: OnboardingModalProps) {
               </svg>
             </div>
             <h2 className="text-2xl font-bold text-gray-900">
-              Welcome to ASU Mentor Bot
+              Welcome to ASU Venture Mentor Bot
             </h2>
             <p className="text-gray-600 mt-2">
               I&apos;m here to help you build something real.
+            </p>
+            <p className="text-gray-500 text-sm mt-3 max-w-sm">
+              This tool is your always-available resource for the countless questions that come up on your entrepreneurship journey. While it&apos;s not a replacement for real mentors and advisors, it&apos;s here to provide quick guidance whenever you need it.
             </p>
           </div>
 

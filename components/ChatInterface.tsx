@@ -122,7 +122,7 @@ export function ChatInterface({ userContext, onUpdateContext }: ChatInterfacePro
               </svg>
             </div>
             <div>
-              <h1 className="font-semibold text-gray-900">ASU Mentor Bot</h1>
+              <h1 className="font-semibold text-gray-900">ASU Venture Mentor Bot</h1>
               <p className="text-xs text-gray-500">
                 Your entrepreneurship guide
               </p>

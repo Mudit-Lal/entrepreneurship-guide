@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ASU Mentor Bot",
+  title: "ASU Venture Mentor Bot",
   description: "AI-powered mentorship for ASU student entrepreneurs",
 };
 

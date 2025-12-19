@@ -1,7 +1,7 @@
 import { UserContext } from "@/types";
 
 /**
- * Build the system prompt for the ASU Mentor Bot.
+ * Build the system prompt for the ASU Venture Mentor Bot.
  */
 export function buildSystemPrompt(
   userContext: UserContext | null,
